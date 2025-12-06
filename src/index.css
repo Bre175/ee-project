@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color:  #111827; 
+  background-color: #f4f6f9; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +13,230 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Card container for auth pages */
+.auth-container {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
 }
 
-button {
+.signup-container {
+  max-width: 1000px; 
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+  font-weight: 700;
+  color: #111827; 
+}
+
+h3 {
+  color: #111827; 
+}
+
+/* Table headers */
+.admin-home table th {
+  color: #111827; 
+  font-weight: 600;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Table cells */
+.admin-home table td {
+  color: #333; 
+  padding: 0.5rem;
+}
+
+/* Header container */
+.header-container {
+  background: #fff;
+  padding: 1rem 2rem;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;         
+  max-width: 1200px;  
+  margin: 1rem auto;  
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+
+input, textarea, select {
+  color: #000000;  
+}
+
+input:focus {
+  border-color: #646cff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(100, 108, 255, 0.5);
+}
+
+/* Buttons */
+button {
+  width: auto; 
+  padding: 0.75rem 2rem; 
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #646cff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  display: inline-block;
+  margin: 1rem auto 0; 
+}
+
+button:hover {
+  background-color: #535bf2;
+}
+
+/* Links */
+a {
+  color: #646cff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer text below forms */
+p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Error messages */
+.error-text {
+  color: #dc2626; 
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+/* Inputs and dropdowns inside auth cards */
+.auth-container input,
+.auth-container select {
+  width: 75%;
+  max-width: 320px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem auto 1rem auto; 
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+
+/* Logo style */
+.auth-logo {
+  width: 140px;
+  margin: 0 auto 0.75rem auto;
+  display: block;
+}
+
+/* Ratio card container */
+.ratio-card {
+  margin-top: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  width: 288px;
+  height: 100px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ratio-green {
+  background-color: #16a34a; 
+}
+
+.ratio-yellow {
+  background-color: #eab308; 
+}
+
+.ratio-red {
+  background-color: #dc2626;
+}
+
+
+.ratio-name {
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.ratio-value {
+  font-weight: 700;
+}
+
+/* Tooltip container */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip bubble */
+.tooltip-box {
+  visibility: hidden;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 20;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+/* Tooltip arrow */
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Hover activation */
+.tooltip-container:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
 }
