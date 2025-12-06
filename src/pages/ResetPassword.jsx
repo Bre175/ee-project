@@ -96,7 +96,7 @@ function ResetPassword() {
       setError("Error resetting password.");
     }
   };
-
+//Display for user to reset password
   return (
     <div>
       <h2>Reset Password for {username}</h2>

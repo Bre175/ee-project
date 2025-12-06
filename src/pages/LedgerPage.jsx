@@ -152,7 +152,7 @@ function LedgerPage() {
 
     return inRange && matchesSearch;
   });
-
+//Routes to each page per user role
   const backRoute =
   userRole === "Admin"
     ? "/admin-home"
@@ -161,7 +161,7 @@ function LedgerPage() {
     : "/manager-home";
 
   const backTabState = { tab: "Chart of Accounts" };
-
+//Starting front end page display
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f9fafb" }}>
       <Header username={username} role={userRole} />

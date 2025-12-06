@@ -15,7 +15,7 @@ function Dashboard() {
       console.error("Logout failed", err.message);
     }
   };
-
+//Home screen after login
   return (
     <div className="Dashboard-container">
       <h2>Welcome to the Dashboard </h2>

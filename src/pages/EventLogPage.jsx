@@ -11,7 +11,7 @@ const EventLogPage = () => {
     username: localStorage.getItem("loggedInUser") || "Admin",
     profilePic: profilePic,
   });
-
+//Pull for db
   useEffect(() => { 
     const unsub = onSnapshot(collection(db, "accountEventLogs"), (snapshot) => {
       const logs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
@@ -65,6 +65,7 @@ const EventLogPage = () => {
               marginTop: "1rem",
             }}
           >
+            {/* All key values on Log page */}
             <thead>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <th style={{ padding: "0.75rem", textAlign: "left" }}>Event ID</th>

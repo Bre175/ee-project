@@ -195,7 +195,7 @@ function Login({ role: propRole }) {
       setError("Something went wrong. Please try again.");
     }
   };
-
+//Display for Login to occure 
   return (
     <div className="auth-container">
       <img src={logo} alt="Equity Experts Logo" className="auth-logo" />

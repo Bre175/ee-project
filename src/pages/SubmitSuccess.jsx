@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+//Submittion display for success after action 
 function SubmitSuccess() {
   return (
     <div style={{ maxWidth: "400px", margin: "50px auto", textAlign: "center" }}>

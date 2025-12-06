@@ -18,7 +18,7 @@ function AdminLogin() {
       setError("Please fill in both email and password.");
       return;
     }
-
+    //try to log in with connectiobn to DB
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
@@ -50,7 +50,7 @@ function AdminLogin() {
       setError("Failed to sign in. Please check credentials.");
     }
   }    
-
+  //Page display for log in to occure
   return (
     <div style={{ maxWidth: "400px", margin: "50px auto" }}>
       <h2>Admin Login</h2>

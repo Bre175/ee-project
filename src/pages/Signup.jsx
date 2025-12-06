@@ -45,7 +45,7 @@ function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-
+//test all feilds are filled out
     if (
       !firstName ||
       !lastName ||
@@ -131,7 +131,7 @@ function Signup() {
       setError("Something went wrong. Please try again.");
     }
   };
-
+  //Display page for user to be able to interact and sign up
   return (
     <div className="auth-container signup-container">
       <img src={logo} alt="Equity Experts Logo" className="auth-logo" />
